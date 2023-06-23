@@ -1,7 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import PromptCard from "./PromptCard";
-import { set } from "mongoose";
 
 // Component List of Prompt Cards
 const PromptCardList = ({ data, handleTagClick }) => {
@@ -62,13 +61,14 @@ const Feed = () => {
     return posts.filter((post) => regex.test(post.tag));
   };
 
+  const fetchPosts = async () => {
+    const response = await fetch("/api/prompt");
+    const data = await response.json();
+    setPosts(data);
+  };
+
   useEffect(() => {
     // fetch posts from api
-    const fetchPosts = async () => {
-      const response = await fetch("/api/prompt");
-      const data = await response.json();
-      setPosts(data);
-    };
     fetchPosts();
   }, []);
 

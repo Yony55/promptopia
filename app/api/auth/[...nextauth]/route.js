@@ -1,6 +1,6 @@
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import { signIn } from "next-auth/react";
+
 import { connectToDatabase } from "@utils/database";
 import User from "@models/user";
 
