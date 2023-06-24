@@ -22,7 +22,7 @@ const Nav = () => {
       <Link href="/" className="flex gap-2 flex-center">
         <Image
           src="/assets/images/logo.svg"
-          alt="Promptopia Logo"
+          alt="Secrets Logo"
           width={30}
           height={30}
           className="object-contain"
@@ -34,7 +34,7 @@ const Nav = () => {
         { session?.user ? (
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="black_btn">
-              Create Post
+              Post Secret
             </Link>
             <button type="button" onClick={signOut} className="outline_btn">
               Sign Out
@@ -95,7 +95,7 @@ const Nav = () => {
                     setToggleDropdown(false);
                   }}
                 >
-                  Create Prompt
+                  Post Secret
                 </Link>
                 <button
                   type="button"

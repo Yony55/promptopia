@@ -6,27 +6,27 @@ const Form = ({type, post, setPost, submitting, handleSubmit}) => {
     <section className="w-full max-w-full flex-start flex-col">
       {/* Header and description */}
       <h1 className="head_text text-left">
-        <span className="purple_gradient">{type} Post</span>
+        <span className="purple_gradient">{type} Secret</span>
       </h1>
       <p className="desc text-left max-w-md">
-        {type} and share amazing prompts with the world, and ley your imagination run wild with any AI-Powered platform.
+        {type} and share your secret with the world.
       </p>
       {/* Form component */}
       <form onSubmit={handleSubmit} className="mt-10 w-full max-w-2x1 flex flex-col gap-7 glassmorphism">
-        {/* Promt field */}
+        {/* Prompt field */}
         <label>
-          <span className="font-satoshi font-semibold text-base text-grey-700">Your AI Prompt</span>
+          <span className="font-satoshi font-semibold text-base text-grey-700">Your secret</span>
           <textarea
             value={post.prompt}
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
-            placeholder="Write your prompt here..."
+            placeholder="Write your secret here..."
             required
             className="form_textarea"
           />
         </label>
         {/* Tag field */}
         <label>
-          <span className="font-satoshi font-semibold text-base text-grey-700">Tag {` `}<span className="font-normal">(#product, #webdevelopment, #idea)</span></span>
+          <span className="font-satoshi font-semibold text-base text-grey-700">Tag {` `}<span className="font-normal">(#personal, #thought, #idea)</span></span>
           <input
             value={post.tag}
             onChange={(e) => setPost({ ...post, tag: e.target.value })}

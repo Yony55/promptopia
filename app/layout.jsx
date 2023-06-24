@@ -5,7 +5,7 @@ import { Children } from 'react'
 
 export const metadata ={
   title: "Secrets",
-  description: "A place where you can share."
+  description: "A place where you can share your secrets."
 }
 
 export const RootLayout = ({children}) => {
