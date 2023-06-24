@@ -46,7 +46,7 @@ const createPrompt = async (e) => {
   return (
     // Pass in props to Form component
     <Form
-      type="Create"
+      type="Post"
       post={post}
       setPost={setPost}
       submitting={submitting}
