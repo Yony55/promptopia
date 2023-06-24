@@ -4,8 +4,8 @@ import Provider from '@components/Provider'
 import { Children } from 'react'
 
 export const metadata ={
-  title: "Promptopia",
-  description: "Promptopia is a place to find inspiration for your next creative project."
+  title: "Secrets",
+  description: "A place where you can share."
 }
 
 export const RootLayout = ({children}) => {
